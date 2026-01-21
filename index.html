@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Ahad | Future Engineer</title>
+    <link id="favicon" rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'theme-bg': 'var(--bg-color)',
+                        'theme-text': 'var(--text-color)',
+                        'theme-muted': 'var(--text-muted)',
+                        'theme-line': 'var(--line-color)',
+                        'theme-card': 'var(--card-bg)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased transition-colors duration-500">
+
+    <div class="fixed left-0 top-0 w-[30px] md:w-[60px] h-full border-r border-theme-line opacity-30 z-0 pointer-events-none diagonal-lines"></div>
+    <div class="fixed right-0 top-0 w-[30px] md:w-[60px] h-full border-l border-theme-line opacity-30 z-0 pointer-events-none diagonal-lines"></div>
+
+    <div id="loader" class="fixed inset-0 z-[9999] bg-[#0a0a0a] flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="relative">
+            <div class="font-serif text-4xl italic text-white mb-4 animate-pulse">MA</div>
+            <div id="loader-perc" class="font-mono text-[10px] tracking-[0.3em] text-white/40 uppercase absolute -bottom-8 left-1/2 -translate-x-1/2">0%</div>
+        </div>
+        <div class="w-48 h-[1px] bg-white/10 mt-12 overflow-hidden relative">
+            <div id="loader-bar" class="absolute top-0 left-0 h-full bg-white w-0 transition-all duration-300"></div>
+        </div>
+    </div>
+
+    <div class="grain-overlay"></div>
+
+    <header class="relative w-full h-[55vh] overflow-hidden">
+        <div class="mesh-gradient absolute inset-0 opacity-40"></div>
+        <div id="theme-toggle" class="absolute top-10 left-1/2 -translate-x-1/2 z-[60] cursor-pointer group select-none">
+            <div class="flex items-center gap-3 px-5 py-2 rounded-full bg-pill-bg backdrop-blur-2xl border border-theme-line shadow-2xl active:scale-95 transition-all">
+                <div class="relative w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-lg overflow-hidden">
+                    <svg id="sun-icon" class="absolute inset-1 text-white transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" /></svg>
+                    <svg id="moon-icon" class="absolute inset-1 text-white transition-transform duration-500 translate-y-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </div>
+                <span class="text-xs font-mono tracking-widest text-theme-text uppercase opacity-80 group-hover:opacity-100">Mohammed Ahad</span>
+            </div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+            <p class="text-white text-3xl md:text-5xl italic font-serif text-center drop-shadow-md">Knowing everything is knowing nothing</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-50 grayscale-[0.3]" alt="Banner">
+    </header>
+
+    <main class="relative z-40 mx-auto max-w-5xl px-8 sm:px-24 -mt-48 pb-32">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20">
+            <div class="space-y-6">
+                <div class="relative group w-48 h-48 md:w-64 md:h-64 tilt-container">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition duration-700 shadow-anchor"></div>
+                    <div class="tilt-card w-full h-full relative z-10">
+                        <img src="image_ac3503.jpg" class="rounded-full w-full h-full object-cover object-center border-[10px] border-theme-bg shadow-2xl grayscale" alt="Profile">
+                    </div>
+                </div>
+                <div class="relative z-50">
+                    <h1 class="text-5xl md:text-7xl font-serif tracking-tight text-theme-text mb-2">Mohammed Ahad</h1>
+                    <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-theme-muted mb-4 ml-1">
+                        <span>20 Years Old</span><span class="opacity-30">•</span>
+                        <span class="text-glow font-bold">Future Engineer</span><span class="opacity-30">•</span>
+                        <span>Student</span>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-6 mt-6">
+                        <a href="#" class="magnetic text-theme-muted hover:text-theme-text"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                        <a href="#" class="magnetic text-theme-muted hover:text-theme-text"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="resume.pdf" download class="magnetic font-mono text-[10px] uppercase tracking-widest border border-theme-line px-4 py-2 rounded-full hover:bg-theme-text hover:text-theme-bg transition-all">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="p-10 border border-theme-line bg-theme-card rounded-[40px] relative overflow-hidden group mb-12">
+            <div class="absolute inset-0 diagonal-lines opacity-10 group-hover:opacity-20 transition-opacity"></div>
+            <div class="relative z-10">
+                <h3 class="font-serif text-3xl italic mb-6">About Me</h3>
+                <p class="text-xl text-theme-muted leading-relaxed font-light max-w-2xl">BCA student at Amity University. Focused on minimalist front-end systems and high-fidelity interface design. Exploring the intersection of code and aesthetics.</p>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12 px-4">
+                <h3 class="font-serif text-2xl italic opacity-80">Projects</h3>
+                <div class="flex-grow h-[1px] bg-theme-line"></div>
+            </div>
+            <div class="space-y-8">
+                <div class="reveal-card group relative border border-theme-line p-8 md:p-12 rounded-[32px] transition-all duration-700 hover:border-theme-text/30 hover:bg-theme-text/[0.02]">
+                    <div class="absolute -top-3 right-8 flex items-center gap-2 px-4 py-1.5 rounded-full bg-theme-text text-theme-bg shadow-xl">
+                        <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] underline decoration-wavy decoration-blue-500">Under Construction</span>
+                    </div>
+                    <h4 class="text-4xl md:text-5xl font-serif group-hover:italic transition-all duration-500 mb-6">Interface System Alpha</h4>
+                    <p class="text-theme-muted text-lg font-light italic leading-relaxed">"Architecting a design language focused on spatial depth. Currently refining the core animation engine."</p>
+                </div>
+                <div class="reveal-card group relative border border-theme-line p-8 md:p-12 rounded-[32px] transition-all duration-700 hover:border-theme-text/30 hover:bg-theme-text/[0.02]">
+                    <div class="absolute -top-3 right-8 flex items-center gap-2 px-4 py-1.5 rounded-full bg-theme-text text-theme-bg shadow-xl">
+                        <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] underline decoration-wavy decoration-blue-500">Under Construction</span>
+                    </div>
+                    <h4 class="text-4xl md:text-5xl font-serif group-hover:italic transition-all duration-500 mb-6">Daily Expense Tracker</h4>
+                    <p class="text-theme-muted text-lg font-light italic leading-relaxed">"A minimal finance utility designed for personal budgeting with clean data visualization."</p>
+                </div>
+                <div class="reveal-card group relative border border-theme-line p-8 md:p-12 rounded-[32px] transition-all duration-700 hover:border-theme-text/30 hover:bg-theme-text/[0.02]">
+                    <div class="absolute -top-3 right-8 flex items-center gap-2 px-4 py-1.5 rounded-full bg-theme-text text-theme-bg shadow-xl">
+                        <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] underline decoration-wavy decoration-blue-500">Under Construction</span>
+                    </div>
+                    <h4 class="text-4xl md:text-5xl font-serif group-hover:italic transition-all duration-500 mb-6">Study Planner</h4>
+                    <p class="text-theme-muted text-lg font-light italic leading-relaxed">"A productivity tool built to manage academic schedules and tasks with an emphasis on focused UI."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12 px-4">
+                <h3 class="font-serif text-2xl italic opacity-80">Technical Stack</h3>
+                <div class="flex-grow h-[1px] bg-theme-line"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+                <div class="md:col-span-4 reveal-card glass-card relative p-10 border border-theme-line rounded-[32px] overflow-hidden group">
+                    <div class="glow-point"></div>
+                    <span class="font-mono text-[10px] opacity-30">01 / Logic</span>
+                    <h4 class="text-3xl font-serif mt-4">Frontend</h4>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="px-4 py-1.5 rounded-full border border-theme-line text-[11px] font-mono">HTML5</span>
+                        <span class="px-4 py-1.5 rounded-full border border-theme-line text-[11px] font-mono">CSS3</span>
+                        <span class="px-4 py-1.5 rounded-full border border-theme-line text-[11px] font-mono">Tailwind CSS</span>
+                        <span class="px-4 py-1.5 rounded-full border border-theme-line text-[11px] font-mono">JavaScript</span>
+                    </div>
+                </div>
+                <div class="md:col-span-2 reveal-card glass-card relative p-10 border border-theme-line rounded-[32px] flex flex-col justify-center items-center text-center overflow-hidden group">
+                    <div class="glow-point"></div>
+                    <span class="font-mono text-[10px] opacity-30 block mb-2">Programming</span>
+                    <h4 class="text-3xl font-serif italic text-gradient mb-3">Java</h4>
+                    <p class="font-mono text-[9px] uppercase tracking-wider text-theme-muted opacity-80 border-t border-theme-line pt-3">Currently learning</p>
+                </div>
+                <div class="md:col-span-3 reveal-card glass-card relative p-10 border border-theme-line rounded-[32px] overflow-hidden group">
+                    <div class="glow-point"></div>
+                    <h4 class="text-3xl font-serif mt-4">Version Control</h4>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="px-4 py-1.5 rounded-full border border-theme-line text-[11px] font-mono">Git</span>
+                        <span class="px-4 py-1.5 rounded-full border border-theme-line text-[11px] font-mono">GitHub</span>
+                    </div>
+                </div>
+                <div class="md:col-span-3 reveal-card glass-card relative p-10 border border-theme-line rounded-[32px] overflow-hidden group">
+                    <div class="glow-point"></div>
+                    <h4 class="text-3xl font-serif mt-4">Database</h4>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="px-4 py-1.5 rounded-full border border-theme-line text-[11px] font-mono">SQL</span>
+                        <span class="px-4 py-1.5 rounded-full border border-theme-line text-[11px] font-mono">MySQL</span>
+                    </div>
+                </div>
+                <div class="md:col-span-3 reveal-card glass-card relative p-10 border border-theme-line rounded-[32px] overflow-hidden group">
+                    <div class="glow-point"></div>
+                    <h4 class="text-3xl font-serif mt-4">Interface Design</h4>
+                    <p class="text-sm text-theme-muted mt-4 italic">Prototyping in Figma.</p>
+                </div>
+                <div class="md:col-span-3 reveal-card glass-card relative p-10 border border-theme-line rounded-[32px] overflow-hidden group">
+                    <div class="glow-point"></div>
+                    <h4 class="text-3xl font-serif mt-4">Research</h4>
+                    <p class="text-sm text-theme-muted mt-4 italic">Exploring Software Architecture.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-32 pt-16 border-t border-theme-line">
+            <div class="flex flex-col items-center text-center space-y-12">
+                <a href="mailto:your-email@gmail.com" class="group relative block">
+                    <p class="text-2xl md:text-3xl font-serif italic text-theme-text max-w-xl leading-relaxed contact-text">"If you've read this far, you might be interested in what I do."</p>
+                    <div class="mt-4 mx-auto w-12 h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent transition-all duration-700 group-hover:w-40"></div>
+                </a>
+                <div class="w-full flex flex-col md:flex-row justify-between items-center gap-6 pt-16 pb-8 opacity-30 font-mono text-[9px] uppercase tracking-[0.2em]">
+                    <p>© <span id="year">2026</span> Mohammed Ahad</p>
+                    <div class="flex items-center gap-2"><span>Updated:</span><span id="update-date" class="text-theme-text opacity-100">Jan 2026</span></div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
